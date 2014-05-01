@@ -80,6 +80,7 @@ function init()
 			$('.key').each(function(index){
 				if($(this).text().toLowerCase() === guess)
 					$(this).removeAttr('style').addClass('keyhit').removeClass('key').off();
+				$(this).off();
 			});
 			alert('You won!');
 		}
@@ -110,7 +111,10 @@ function init()
 
 		//Check for defeat
 		if(tries === 0)
+		{
+			$('.key').off();
 			alert('You lost! The word is ' + words[0]);
+		}
 		
 	});
 }
