@@ -147,9 +147,9 @@ function choosePartition(partitions)
 		else if(a['words'].length < b['words'].length) return 1;
 		else
 		{
-			if(countChar(a['mask'], '-') > countChar(b['mask', '-']))
+			if(countChar(a['mask'], '-') > countChar(b['mask'], '-'))
 				return -1;
-			else if(countChar(a['mask'], '-') < countChar(b['mask', '-']))
+			else if(countChar(a['mask'], '-') < countChar(b['mask'], '-'))
 				return 1;
 			else
 				return 0;
